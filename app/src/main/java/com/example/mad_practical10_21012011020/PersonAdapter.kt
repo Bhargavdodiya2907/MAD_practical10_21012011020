@@ -14,11 +14,11 @@ class PersonAdapter (context: Context, val PersonArray:ArrayList<Person>):ArrayA
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view = LayoutInflater.from(context).inflate(R.layout.person_item, parent, false)
-        view.findViewById<TextView>(R.id.name).text = PersonArray[position].name
-        view.findViewById<TextView>(R.id.mobileno).text = PersonArray[position].phoneNo
-        view.findViewById<TextView>(R.id.emailid).text = PersonArray[position].emailId
-        view.findViewById<TextView>(R.id.address).text = PersonArray[position].address
-        view.findViewById<MaterialButton>(R.id.material_btn).setOnClickListener {
+        view.findViewById<TextView>(R.id.txt_name).text = PersonArray[position].name
+        view.findViewById<TextView>(R.id.txt_mobileno).text = PersonArray[position].phoneNo
+        view.findViewById<TextView>(R.id.txt_emailid).text = PersonArray[position].emailId
+        view.findViewById<TextView>(R.id.txt_address).text = PersonArray[position].address
+        view.findViewById<MaterialButton>(R.id.material_btn1).setOnClickListener {
             Intent(context, MapsActivity::class.java).putExtra(
                 "object",
                 PersonArray[position]
