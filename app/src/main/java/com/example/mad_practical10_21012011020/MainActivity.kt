@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 try {
                     val data = HttpRequest().makeServiceCall(
                         "https://api.json-generator.com/templates/qjeKFdjkXCdK/data",
-                        "dchj8v1b6qqdjzbqood1jgpachyfzlw58r540gru")
+                        "rbn0rerl1k0d3mcwgw7dva2xuwk780z1hxvyvrb1")
                     withContext(Dispatchers.Main) {
                         try {
                             if(data != null)
@@ -34,10 +34,13 @@ class MainActivity : AppCompatActivity() {
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
+
+
             }
+
+
         }
     }
-
     private fun getPersonDetailsFromJson(sJson: String?) {
         val personList = ArrayList<Person>()
         try {
@@ -54,15 +57,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun setarraytolistview(){
-        val personListView=findViewById<ListView>(R.id.listview)
-        val Array = arrayListOf<Person>(
-            Person("bhargav29","bhargav","bhargav@gmail.com","9327857942","veraval",90.90,909.90),
-            Person("chintan13","chintan","chintan@gmail.com","7956481235","goladhar",91.90,901.90),
-            Person("sagar11","sagar","sagar@gmail.com","1245653897","junagadh",92.90,902.90),
-            Person("dev10","dev","dev@gmail.com","7895463218","rajkot",93.90,903.90),
-            Person("diya12","diya","diya@gmail.com","1254639875","mehsana",94.90,904.90)
-        )
 
-    }
+
+
 }
